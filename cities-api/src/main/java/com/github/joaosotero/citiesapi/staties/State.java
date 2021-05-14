@@ -1,8 +1,21 @@
 package com.github.joaosotero.citiesapi.staties;
 
 
+import java.util.List;
+import javax.persistence.Basic;
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import com.github.joaosotero.citiesapi.countries.Country;
+import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
+import org.hibernate.annotations.TypeDefs;
 
 @Entity(name = "State")
 @Table(name = "estado")
@@ -21,9 +34,9 @@ public class State {
 
     private Integer ibge;
 
-  /* 1st
+  // 1st
   @Column(name = "pais")
-  private Integer countryId;*/
+  private Integer countryId;
 
     // 2nd - @ManyToOne
 //    @ManyToOne
@@ -58,11 +71,11 @@ public class State {
         return ddd;
     }
 
-    public Country getCountry() {
-        return country;
-    }
+//    public Country getCountry() {
+//        return country;
+//    }
 
-  /*public Integer getCountryId() {
+  public Integer getCountryId() {
       return countryId;
-  }*/
+  }
 }
