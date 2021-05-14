@@ -1,4 +1,4 @@
-package com.github.joaosotero.citiesapi;
+package com.github.joaosotero.citiesapi.countries;
 
 import com.github.joaosotero.citiesapi.countries.Country;
 import com.github.joaosotero.citiesapi.countries.repository.CountryRepository;
